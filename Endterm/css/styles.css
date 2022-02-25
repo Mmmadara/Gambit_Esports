@@ -1,0 +1,1143 @@
+@font-face {
+  font-family: 'Circe Regular';
+  src: url('../fonts/Circe-Regular.eot');
+  src: url('../fonts/Circe-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Circe-Regular.woff') format('woff'),
+    url('../fonts/Circe-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe Extra Bold';
+  src: url('../fonts/Circe-ExtraBold.eot');
+  src: url('../fonts/Circe-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Circe-ExtraBold.woff') format('woff'),
+    url('../fonts/Circe-ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --toggle-moon: url('../images/night.svg');
+  --navbar-bg: #FFF;
+  --navbar-text: black;
+  --all: #FFF;
+  --contact-text-author: black;
+  --contact-text-topic: black;
+  --aboutus-text: black;
+  --divBlock-bg: rgb(245, 245, 245);
+}
+
+:root[data-theme='dark'] {
+  --toggle-moon: url('../images/day.svg');
+  --navbar-bg: #0E1420;
+  --navbar-text: white;
+  --all: #0E1420;
+  --contact-text-author: white;
+  --contact-text-topic: white;
+  --aboutus-text: white;
+  --divBlock-bg: rgb(27, 38, 61);
+}
+
+a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+a.playerlinks:hover {
+  color: red;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+p a {
+  text-decoration: underline;
+}
+
+div {
+  display: block;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+.champions_logo {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 160px;
+  height: 38px;
+}
+
+.navbar {
+  z-index: 100;
+  background-color: var(--navbar-bg);
+  font-family: Circe Extra Bold, sans-serif;
+  font-weight: 800;
+  line-height: 1.5;
+  font-size: 1.2em;
+  transition: all 0.4s ease 0s;
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-text {
+  color: var(--navbar-text);
+  transition: all 0.4s ease 0s;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: var(--navbar-text);
+  transition: all 0.4s ease 0s;
+}
+
+.navbar .nav-item:hover .nav-link {
+  color: #E4002B;
+}
+
+.navbar-toggler-icon {
+  background-image: url('../images/header-menu-mobile.svg');
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.toggle-theme {
+  background: var(--toggle-moon) no-repeat;
+  border: none;
+  background-size: contain;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  transition: all 0.4s ease 0s;
+}
+
+.all {
+  display: block;
+  min-width: 0;
+  background-color: var(--all);
+  color: #0E1420;
+  transition: all 0.4s ease 0s;
+}
+.container {
+  position: relative;
+  min-width: 0;
+  width: 100vw;
+}
+
+
+.main {
+  display: flex;
+  margin: 0;
+  min-width: 0;
+  width: 100vw;
+  max-width: 100vw;
+  max-height: calc(100vh - 134px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video {
+  display: flex;
+  margin: auto;
+  min-width: 0;
+  position: relative;
+  z-index: 0;
+}
+
+.team {
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+}
+
+.name {
+  display: flex;
+  z-index: 1;
+  margin: 0;
+  padding: 8vw;
+  min-width: 0;
+  font-weight: 800;
+  line-height: 1;
+  position: absolute;
+  font-family: Circe Extra Bold, sans-serif;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+.mtc, .ultragear {
+  z-index: 1;
+  /* position: absolute;
+  margin: 0;
+  min-width: 0; */
+  max-width: 100%;
+  height: auto;
+  height: 24px;
+  margin-right: 24px;
+}
+
+footer {
+  margin: 0;
+  min-width: 0;
+  padding-top: 48px;
+  padding-bottom: 64px;
+  background-color: #0E1420;
+}
+
+.join {
+  margin: 0;
+  min-width: 0;
+  padding-top: 80px;
+  padding-bottom: 96px;
+  margin-top: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgba(255, 255, 255, 0.1);
+  background-color: #0E1420;
+}
+
+.welcome {
+  font-family: Circe Extra Bold, sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.social {
+  margin-left: 25vw;
+  margin-right: 20vw;
+  margin-top: 7vh;
+}
+
+.icon {
+  font-size: 3rem;
+}
+
+a.text:hover {
+  color: #E4002B;
+}
+
+.text {
+  color: white;
+  transition: 0.4s;
+  text-align: center;
+}
+
+.end {
+  text-align: center;
+}
+
+.end1 {
+  margin-top: 15px;
+  color: #5A5E66;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.box {
+  margin: 14vh 15vw;
+  display: block;
+}
+
+.mainpart0 {
+  font-size: 96px;
+  font-weight: 700;
+  font-family: Circe Extra Bold, sans-serif;
+  margin: 50px 0px 0px;
+  min-width: 0px;
+  text-transform: uppercase;
+  color: #E4002B;
+  position: relative;
+}
+
+.mainpart01 {
+  font-size: 96px;
+  font-weight: 700;
+  font-family: Circe Extra Bold, sans-serif;
+  margin: 40px 0px 15px 25px;
+  min-width: 0px;
+  text-transform: uppercase;
+  color: #E4002B;
+  position: relative;
+}
+
+.mainpart {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  font-family: Circe, sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+  font-size: 40px;
+  width: 100%;
+  color: var(--aboutus-text);
+  transition: all 0.4s ease 0s;
+}
+
+.main-container {
+  padding-top: 96px;
+  max-width: 1098px;
+  margin: auto;
+}
+
+.main-container img {
+  padding-top: 24px;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width:1098px) {
+  .main-container {
+    padding: 8vh 5vw 1vh;
+  }
+
+  .body-container {
+    padding: 0vh 5vw;
+  }
+
+  .mainpart0 {
+    font-size: calc(48px + (96-48) * ((100vw - 320px) / (1980 - 320)));
+  }
+
+  .mainpart {
+    font-size: calc(24px + (40-24) * ((100vw - 320px) / (1980 - 320)));
+  }
+}
+
+.con {
+  position: relative;
+  font-family: Circe Extra Bold, sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  font-size: 48px;
+  text-transform: uppercase;
+  color: #E4002B;
+  margin-bottom: 8px;
+}
+
+.container2 {
+  margin-top: 8vh;
+}
+
+a span {
+  text-decoration: underline;
+  color: #E4002B;
+}
+
+.author {
+  color: var(--contact-text-author);
+  transition: all 0.4s ease 0s;
+}
+
+.topic {
+  color: var(--contact-text-topic);
+  transition: all 0.4s ease 0s;
+}
+
+.content {
+  margin-bottom: 3vh;
+}
+
+.body-container {
+  margin: auto;
+  max-width: 1098px;
+  /* padding-left: 210px;
+  padding-top: 70px;
+  padding-right: 600px; */
+}
+
+.bodyblock {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-bottom: 64px;
+  width: 100%;
+}
+
+.body-story {
+  padding-right: 40px;
+}
+
+.bodyblock0 {
+  color: #E4002B;
+  text-transform: uppercase;
+  font-family: Circe Extra Bold, sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  padding: 100px auto 50px;
+}
+
+.year {
+  padding-bottom: 15px;
+  color: var(--aboutus-text);
+  transition: all 0.4s ease 0s;
+}
+
+.textblock {
+  font-family: Circe Regular, sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
+  color: var(--aboutus-text);
+  transition: all 0.4s ease 0s;
+}
+
+.oneblockfame:hover .textblock, .oneblockfame:hover .teamname {
+  color: white;
+}
+
+.a-text {
+  color: red;
+  transition: all 0.4s ease-in;
+}
+
+.picblock {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  display: flex;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.picblock0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-top: 24px;
+}
+
+.picblock1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  transition: opacity 300ms ease;
+}
+
+.minipicblock {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  flex-direction: column;
+  display: flex;
+}
+
+.photobody {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  height: 100%;
+  width: 336px;
+  text-align: left;
+}
+
+.underphototext {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: Circe Regular, sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.5;
+  width: 100%;
+  margin-top: 8px;
+  color: #767676;
+  text-align: left;
+}
+
+.person {
+  padding-top: 48px;
+  margin-bottom: 96px;
+}
+
+.photo {
+  margin: 0px 24px 0px 0px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 96px;
+  height: 160px;
+}
+
+/* тут начинается блок с игроками */
+.players {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.playerlinks {
+  box-sizing: border-box;
+  margin: 0px;
+  margin-bottom:
+    min-width: 0px;
+  text-decoration: none;
+  color: rgb(14, 20, 32);
+}
+
+.oneplayer {
+  box-sizing: border-box;
+  margin: 24px 0px 0px;
+  min-width: 0px;
+  width: 100%;
+  height: 155px;
+  background-color: var(--divBlock-bg);
+  transition: background 0.4s ease 0s;
+  padding-left: 16px;
+  padding-right: 16px;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  display: flex;
+}
+
+.oneplayer:hover {
+  background-color: #E4002B;
+  color: white;
+}
+
+.leftpart {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  align-items: center;
+  display: flex;
+}
+
+.playerPortrait {
+  box-sizing: border-box;
+  margin: 0px 24px 0px 0px;
+  min-width: 0px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.shiro {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  background-image: url(https://images.prismic.io/gambit-website/9cc78391-15f3-4696-9ed9-ec9faaa1b53d_Youngstrs-sh1r0.svg?auto=compress,format);
+  background-repeat: no-repeat;
+  width: 65px;
+  height: 108px;
+}
+
+.shiroHover {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  background-image: url(https://images.prismic.io/gambit-website/10008fa7-70a7-4f5a-a2bf-545a77f39007_Youngstrs-sh1r0_hover.svg?auto=compress,format);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  width: 65px;
+  height: 108px;
+}
+
+.axile {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  background-image: url(https://images.prismic.io/gambit-website/ebd70ee2-1700-49c2-868a-304d44048b04_Youngstrs-Ax1Le.svg?auto=compress,format);
+  background-repeat: no-repeat;
+  width: 65px;
+  height: 108px;
+}
+
+.axileHover {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  background-image: url(https://images.prismic.io/gambit-website/fae317d0-e713-4769-adb4-32e5b30ef7da_Youngstrs-Ax1Le_hover.svg?auto=compress,format);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  width: 65px;
+  height: 108px;
+}
+
+.hobbit {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  background-image: url(https://images.prismic.io/gambit-website/b86ae7cd-72a4-48cf-8899-519f857aaab8_CSGO-HObbit.svg?auto=compress,format);
+  background-repeat: no-repeat;
+  width: 65px;
+  height: 108px;
+}
+
+.hobbitHover {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  background-image: url(https://images.prismic.io/gambit-website/9969aa01-459c-487f-a4e3-6607a7f456b9_CSGO-HObbit_hover.svg?auto=compress,format);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  width: 65px;
+  height: 108px;
+}
+
+.interz {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  background-image: url(https://images.prismic.io/gambit-website/3073b9ac-2337-4b84-a456-8626df6fe30e_Youngstrs-interz.svg?auto=compress,format);
+  background-repeat: no-repeat;
+  width: 65px;
+  height: 108px;
+}
+
+.interzHover {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  background-image: url(https://images.prismic.io/gambit-website/5667602e-b81e-452c-85ce-8ed70f07d761_Youngstrs-interz_hover.svg?auto=compress,format);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  width: 65px;
+  height: 108px;
+}
+
+.nafany {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  background-image: url(https://images.prismic.io/gambit-website/ae2798bd-6ba7-4686-a893-c7cb8d42534a_Youngstrs-nafany.svg?auto=compress,format);
+  background-repeat: no-repeat;
+  width: 65px;
+  height: 108px;
+}
+
+.nafanyHover {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  background-image: url(https://images.prismic.io/gambit-website/9afa519a-3c01-463a-b2d8-bb435d4837c3_Youngstrs-nafany_hover.svg?auto=compress,format);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  width: 65px;
+  height: 108px;
+}
+
+.playerStar {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  position: relative;
+  height: 100%;
+}
+
+.hobbitStar {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  max-width: 100%;
+  width: 22px;
+  height: 20px;
+  position: absolute;
+  top: -2px;
+  left: 0px;
+  transition: all 0.4s ease 0s;
+}
+
+.playername0 {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  display: grid;
+  align-items: start;
+  gap: 18px;
+  grid-template-columns: 1fr 24px;
+}
+
+.playername {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  font-family: Circe, sans-serif;
+  font-weight: 700;
+  line-height: 1.15;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--aboutus-text);
+}
+
+.nickname {
+  box-sizing: border-box;
+  margin: 0px 16px 0px 0px;
+  min-width: 0px;
+  font-family: Circe, sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
+  font-size: 16px;
+  text-decoration: none;
+  color: var(--aboutus-text);
+}
+
+.role {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  font-family: Circe, sans-serif;
+  font-weight: 700;
+  line-height: 1.33;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: var(--aboutus-text);
+}
+
+.rightpart {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  align-items: baseline;
+  justify-content: space-between;
+  display: flex;
+}
+
+.mainlinks {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: flex;
+}
+
+.mainlink {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  transition: opacity 0.4s ease 0s;
+}
+
+.mediaIcon {
+  box-sizing: border-box;
+  margin: 0px 16px 0px 0px;
+  min-width: 0px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.mainIcon {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  max-width: 32px;
+  height: 16px;
+}
+
+.iconHover {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  max-width: 32px;
+  height: 16px;
+}
+
+.oneplayer:hover .teammatePortrait {
+  opacity: 0;
+}
+
+.oneplayer:hover .teammatePortraitHover {
+  opacity: 1;
+}
+
+.oneplayer:hover .teammateStar {
+  opacity: 0;
+}
+
+.oneplayer .teammateStarHover {
+  opacity: 0;
+}
+
+.oneplayer:hover .teammateStarHover {
+  opacity: 1;
+}
+
+.oneplayer:hover .socialIcon {
+  opacity: 0;
+}
+
+.oneplayer:hover .socialIconHover {
+  opacity: 1;
+}
+
+.oneplayer:hover .playername, .oneplayer:hover .nickname, .oneplayer:hover .role {
+  color: white
+}
+
+.oneplayer .teammatePortrait, .oneplayer .teammatePortraitHover, .oneplayer .socialIcon, .oneplayer .socialIconHover, .oneplayer .teammateStar {
+  transition: all 0.4s ease 0s;
+}
+
+@media screen and (min-width: 768px) {
+  .oneplayer {
+    padding-left: 48px;
+    padding-right: 48px;
+    height: 141px;
+  }
+
+  .playername {
+    font-size: 24px;
+  }
+
+  .nickname {
+    font-size: 18px;
+  }
+
+  .rightpart {
+    align-items: baseline;
+  }
+
+  .mainlinks {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .mediaIcon {
+    margin-right: 24px;
+  }
+
+  .mainIcon {
+    max-width: 48px;
+    height: 24px;
+  }
+
+  .iconHover {
+    max-width: 48px;
+    height: 24px;
+  }
+
+  .hobbitStar {
+    width: 24px;
+    height: 23px;
+  }
+}
+
+/* photo players */
+.photo.Ax1le {
+  background-image: url(https://images.prismic.io/gambit-website/ebd70ee2-1700-49c2-868a-304d44048b04_Youngstrs-Ax1Le.svg?auto=compress,format);
+}
+
+.photo.Sh1ro {
+  background-image: url(https://images.prismic.io/gambit-website/9cc78391-15f3-4696-9ed9-ec9faaa1b53d_Youngstrs-sh1r0.svg?auto=compress,format);
+}
+
+.photo.Hobbit {
+  background-image: url(https://images.prismic.io/gambit-website/b86ae7cd-72a4-48cf-8899-519f857aaab8_CSGO-HObbit.svg?auto=compress,format);
+}
+
+.photo.Nafany {
+  background-image: url(https://images.prismic.io/gambit-website/ae2798bd-6ba7-4686-a893-c7cb8d42534a_Youngstrs-nafany.svg?auto=compress,format);
+}
+
+.photo.Interz {
+  background-image: url(https://images.prismic.io/gambit-website/3073b9ac-2337-4b84-a456-8626df6fe30e_Youngstrs-interz.svg?auto=compress,format);
+}
+
+.mainpartfame {
+  box-sizing: border-box;
+  margin: 0px;
+  margin-bottom: 128px;
+  min-width: 0px;
+  font-family: Circe, sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+  font-size: 40px;
+  width: 100%;
+  color: var(--aboutus-text);
+  transition: all 0.4s ease 0s;
+}
+
+.teamname {
+  box-sizing: border-box;
+  margin: 0px 0px 8px;
+  min-width: 0px;
+  font-family: Circe, sans-serif;
+  font-weight: 700;
+  line-height: 1.15;
+  font-size: 24px;
+  text-transform: uppercase;
+  width: 100%;
+  color: var(--aboutus-text);
+}
+
+.who {
+  margin: 0px 0px 8px;
+  min-width: 0px;
+  font-family: Circe Extra Bold, sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  font-size: 48px;
+  text-transform: none;
+  color: #e4002b;
+}
+
+.nameSurname {
+  font-family: Circe Extra Bold, sans-serif;
+  font-weight: 800;
+  line-height: 1.15;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.place {
+  font-family: Circe Extra Bold, sans-serif;
+  font-weight: 800;
+  line-height: 1.2;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.city {
+  color: var(--navbar-text);
+  font-family: Circe Extra Bold, sans-serif;
+  font-weight: 800;
+  line-height: 1.33;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.5;
+}
+
+.snet {
+  font-size: 2em;
+}
+
+.snet a i {
+  padding: 0px 10px;
+  color: #e4002b;
+}
+
+.snet a i:hover {
+  opacity: 0.75;
+}
+
+.textblock.team p {
+  font-size: 16px;
+}
+
+.score {
+  padding: 60px 0px 0px;
+}
+
+.yearsOfDude, .daysInTeam {
+  display: block;
+  font-family: Circe Extra Bold, sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #E4002B;
+}
+
+.years, .days {
+  font-family: Circe Extra Bold, sans-serif;
+  font-weight: 800;
+  line-height: 1.2;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  width: 100px;
+}
+
+.oneblock {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  width: 100%;
+  background-color: var(--divBlock-bg);
+  transition: all 0.2s ease 0s;
+  color: var(--aboutus-text);
+  padding: 24px;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  display: flex;
+}
+
+.oneblock:hover {
+  background-color: #E4002B;
+  color: white;
+}
+
+.oneblockfame {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  background-color: var(--divBlock-bg);
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  color: var(--aboutus-text);
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  align-items: flex-start;
+  justify-content: space-between;
+  display: flex;
+}
+
+.oneblockfame:hover {
+  background-color: #E4002B;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .person {
+    width: 1098px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 128px;
+  }
+
+  .oneblock {
+    padding: 32px 48px;
+    align-items: baseline;
+  }
+
+  .teamname {
+    margin-bottom: 16px;
+    width: 60%;
+  }
+
+  .photo {
+    width: 147px;
+    height: 272px;
+  }
+
+  .who {
+    margin-bottom: 32px;
+  }
+
+  .nameSurname {
+    font-size: 32px;
+    color: var(--navbar-text);
+  }
+
+  .place {
+    color: var(--navbar-text);
+    font-size: 16px;
+  }
+
+  .textblock.team p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .yearsOfDude, .daysInTeam {
+    font-size: 64px;
+  }
+
+  .years, .days {
+    color: var(--navbar-text);
+    font-size: 16px;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 1098px) {
+  .person {
+    padding-top: 96px;
+    margin-bottom: 128px;
+  }
+
+  .who {
+    font-size: 96px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .con {
+    font-size: 96px;
+  }
+
+  .mainpartfame {
+    margin-bottom: 132px;
+  }
+
+  .oneblockfame {
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .welcome {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .name {
+    font-size: 2.8em;
+  }
+}
+
+.minipicblock img {
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+}
+
+.minipicblock img:hover {
+  -webkit-transform: scale(2.0);
+  -moz-transform: scale(2.0);
+  -o-transform: scale(2.0);
+}
